@@ -1,0 +1,7 @@
+Final exam 1:
+    Create a script
+    - Simulate 5 concurrent users Register new account on a Nopcommerce. Ramp up 10s to 5 users. Loading 1m, them ramp down in 10s.
+    - Simulate 10 concurrent users to Login then browsing product, some of them add some products to cart. Each users run 5 iterations.
+Final exam 2:
+    - Simulate 5 concurrent users Register new account on site: test-api.k6.io, run total 5 iterations only.
+    - Simulate 10 concurrent users to Login and create new record on that site then logout, keep rate of 5 iterations per second, and loading 30s.  
