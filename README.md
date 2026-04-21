@@ -12,9 +12,9 @@ K6Demo is a sample k6 test project for REST API performance testing. It contains
 
 ## Prerequisites
 
-- [k6](https://k6.io/docs/getting-started/installation/) installed
+- [k6](https://dl.k6.io/msi/k6-latest-amd64.msi) installed
 - Node.js (for editing, not required to run tests)
-- [NopCommerce/NopWeb] or your NopWeb instance running at http://localhost:5000 for commerce scenarios
+- [NopCommerce/NopWeb](https://www.nopcommerce.com/download-nopcommerce-link?type=sourcepackage) or your NopWeb instance running at http://localhost:5000 for commerce scenarios
 
 ## Quick start
 
