@@ -30,13 +30,13 @@ k6 run test/pizza.main.js
 
 ## Repository structure (important paths)
 
-config/env.js           — environment/config values
-data/                   — test data (CSV files)
-scenarios/ex1/          — NopCommerce scenarios (register, user flow)
-scenarios/ex2/          — Pizza API scenarios (register, user flow)
-services/               — service layer (auth, cart, rating)
-test/                   — main entry points for k6
-utils/                  — helpers for formatting, requests, tokens
+- config/env.js           — environment/config values
+- data/                   — test data (CSV files)
+- scenarios/ex1/          — NopCommerce scenarios (register, user flow)
+- scenarios/ex2/          — Pizza API scenarios (register, user flow)
+- services/               — service layer (auth, cart, rating)
+- test/                   — main entry points for k6
+- utils/                  — helpers for formatting, requests, tokens
 
 ## Configuration
 
