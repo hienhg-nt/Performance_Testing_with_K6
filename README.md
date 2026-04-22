@@ -1,7 +1,7 @@
 
-# K6Demo
+# Performance_Testing_with_K6
 
-K6Demo is a sample k6 test project for REST API performance testing. It contains test scenarios, services, test data, and utilities to demonstrate load testing patterns with k6 for two systems: a NopCommerce-like app and a Pizza ordering API.
+Performance_Testing_with_K6 is a sample k6 test project for REST API performance testing. It contains test scenarios, services, test data, and utilities to demonstrate load testing patterns with k6 for two systems: a NopCommerce-like app and a Pizza rating API.
 
 ---
 
