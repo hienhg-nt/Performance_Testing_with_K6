@@ -1,7 +1,7 @@
 
-# K6Demo
+# Performance_Testing_with_K6
 
-K6Demo is a sample k6 test project for REST API performance testing. It contains test scenarios, services, test data, and utilities to demonstrate load testing patterns with k6 for two systems: a NopCommerce-like app and a Pizza ordering API.
+Performance_Testing_with_K6 is a sample k6 test project for REST API performance testing. It contains test scenarios, services, test data, and utilities to demonstrate load testing patterns with k6 for two systems: a NopCommerce-like app and a Pizza rating API.
 
 ---
 
@@ -12,9 +12,9 @@ K6Demo is a sample k6 test project for REST API performance testing. It contains
 
 ## Prerequisites
 
-- [k6](https://k6.io/docs/getting-started/installation/) installed
+- [k6](https://dl.k6.io/msi/k6-latest-amd64.msi) installed
 - Node.js (for editing, not required to run tests)
-- [NopCommerce/NopWeb] or your NopWeb instance running at http://localhost:5000 for commerce scenarios
+- [NopCommerce/NopWeb](https://www.nopcommerce.com/download-nopcommerce-link?type=sourcepackage) or your NopWeb instance running at http://localhost:5000 for commerce scenarios
 
 ## Quick start
 
@@ -30,13 +30,13 @@ k6 run test/pizza.main.js
 
 ## Repository structure (important paths)
 
-config/env.js           — environment/config values
-data/                   — test data (CSV files)
-scenarios/ex1/          — NopCommerce scenarios (register, user flow)
-scenarios/ex2/          — Pizza API scenarios (register, user flow)
-services/               — service layer (auth, cart, rating)
-test/                   — main entry points for k6
-utils/                  — helpers for formatting, requests, tokens
+- config/env.js           — environment/config values
+- data/                   — test data (CSV files)
+- scenarios/ex1/          — NopCommerce scenarios (register, user flow)
+- scenarios/ex2/          — Pizza API scenarios (register, user flow)
+- services/               — service layer (auth, cart, rating)
+- test/                   — main entry points for k6
+- utils/                  — helpers for formatting, requests, tokens
 
 ## Configuration
 

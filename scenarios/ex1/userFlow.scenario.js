@@ -37,7 +37,7 @@ export function userFlowScenario() {
     viewProductRes = viewProduct(config, product.productName);
     sleep(1);
   });
-
+  
   if (Math.random() < 0.5) {
     group('Add to Cart', function () {
       const cartPayload = {
