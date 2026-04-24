@@ -21,10 +21,6 @@ export function userFlowScenario() {
     password: 'secret',
   };
 
-  group('Register', () => {
-    const res = registerPizza(env, user);
-  });
-
   let authToken = null;
   group('Login', () => {
     const res = loginPizza(env, user);
