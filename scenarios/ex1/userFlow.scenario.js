@@ -21,9 +21,10 @@ export function userFlowScenario() {
   const config = CONFIG[env];
 
   let viewProductRes;
+  const product = randomItem(productData);
   const user = randomItem(csvData);
   const payload = {
-    Emmail: user.email,
+    Email: user.email,
     Password: user.password,
   };
 
@@ -33,13 +34,14 @@ export function userFlowScenario() {
   });
 
   group('View Products', function () {
-    viewProductRes = viewProduct(config, randomItem(productData).productName);
+    viewProductRes = viewProduct(config, product.productName);
     sleep(1);
   });
+
   if (Math.random() < 0.5) {
     group('Add to Cart', function () {
       const cartPayload = {
-        "addtocart_4.EnteredQuantity": randomIntBetween(productData.orderMinimumQuantity, productData.orderMaximumQuantity),
+        "addtocart_4.EnteredQuantity": randomIntBetween(product.orderMinimumQuantity, product.orderMaximumQuantity),
       };
       const res = addToCart(viewProductRes.productURL, cartPayload, viewProductRes.token);
       sleep(1);

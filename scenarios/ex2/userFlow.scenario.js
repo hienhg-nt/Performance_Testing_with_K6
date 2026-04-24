@@ -1,6 +1,6 @@
 import http from 'k6/http';
 import { CONFIG } from '../../config/env.js';
-import { registerPizza, loginPizza } from '../../services/auth.service.js';
+import { registerPizza, loginPizza, logoutPizza } from '../../services/auth.service.js';
 import { createRating } from '../../services/rating.service.js';
 import { SharedArray } from 'k6/data';
 import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js';
@@ -38,5 +38,9 @@ export function userFlowScenario() {
       stars: Number(product.ratings),
     };
     const res = createRating(env, authToken, payload);
+  });
+
+  group('Logout', () => {
+    const res = logoutPizza(env, user, authToken);
   });
 }

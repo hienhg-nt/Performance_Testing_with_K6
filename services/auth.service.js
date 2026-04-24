@@ -1,6 +1,8 @@
 import http from 'k6/http';
 import { check } from 'k6';
 import { extractToken } from '../utils/token.js';
+import { buildRequestConfig } from '../utils/request.js';
+
 
 export function registerNopCommerce(config, payload) {
   const registerURL = `${config.baseUrl}${config.endpoints.register}`;
@@ -66,6 +68,20 @@ export function loginPizza(config, user) {
 
   check(res, {
     'Logged in successfully': (r) => r.status === 201 || r.status === 200,
+  });
+
+  return res;  
+}
+
+export function logoutPizza(config, payload, authToken) {
+  const url = `${config.baseUrl}${config.endpoints.logout}`;
+  const cfg = buildRequestConfig(authToken, { name: 'Logout' });
+  cfg.headers = { 'Content-Type': 'application/json', ...(cfg.headers || {}) };
+
+  const res = http.post(url, JSON.stringify(payload), cfg);
+
+  check(res, {
+    'Logged out successfully': (r) => r.status === 200,
   });
 
   return res;

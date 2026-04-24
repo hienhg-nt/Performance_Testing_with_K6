@@ -13,6 +13,7 @@ export const CONFIG = {
       register: '/api/users',
       login: '/api/users/token/login',
       rating: '/api/ratings',
+      logout: '/api/users/token/logout',
     },
   },
 };
